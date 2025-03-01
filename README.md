@@ -119,7 +119,7 @@ The transformed images were saved in the `output1a` folder.
 <p align="center">
   <img src="input/image1.jpeg" alt="Grayscale" width="200"/>
   <img src="input/image2.jpeg" alt="Negative" width="200"/>
-  <img src="/home/jinesh14/CourseWork/VR/input/image3.jpeg" alt="Histogram Equalization" width="200"/>
+  <img src="image3.jpeg" alt="Histogram Equalization" width="200"/>
 </p>
 
 Final stitched image 'output2/stitched2.jpeg':
