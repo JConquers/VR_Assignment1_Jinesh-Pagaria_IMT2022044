@@ -52,6 +52,84 @@ python scripts/image_stitching.py
 - Separated coins images in `output1c`
 - Stitched panorama in `output2`
 
+
+## Methods, Observations and Results
+
+### Image Processing and Transformation
+
+We applied several transformations on the input image to explore different visual enhancements and prepare it for further analysis. These transformations included:
+
+- **Grayscale Conversion:** Simplifies image data by reducing the color channels.
+- **Image Negative:** Highlights contrast by inverting pixel intensities.
+- **Contrast Stretching:** Enhances the contrast by stretching pixel intensity across the entire range.
+- **Histogram Equalization:** Adjusts the contrast using the image’s histogram for a more uniform intensity distribution.
+
+The transformed images were saved in the `output1a` folder.
+<p align="center">
+  <img src="output1a/grayscale.png" alt="Grayscale" width="200"/>
+  <img src="output1a/image_negative.png" alt="Negative" width="200"/>
+</p>
+<p align="center">
+  <img src="output1a/contrast_stretch.png" alt="Contrast Stretching" width="200"/>
+  <img src="output1a/histogram_equalized.png" alt="Histogram Equalization" width="200"/>
+</p>
+
+
+### Edge Detection and Highlighting
+
+We applied the Canny edge detector to highlight edges in the processed images and enhanced them by overlaying detected edges in green. Gaussian blurring was used before edge detection to reduce noise (***specially the 2 concentric cicles in 10 rupee coin***) and improve detection accuracy. The highlighted images were saved in the `output1b` folder.
+
+<p align="center">
+  <img src="output1b/highlighted_contrast_stretch.png" alt="Grayscale" width="200"/>
+  <img src="output1b/highlighted_grayscale.png" alt="Negative" width="200"/>
+</p>
+<p align="center">
+  <img src="output1b/highlighted_histogram_equalized.png" alt="Contrast Stretching" width="200"/>
+  <img src="output1b/highlighted_image_negative.png" alt="Histogram Equalization" width="200"/>
+</p>
+
+### Region-Based Segmentation and Contour Detection
+
+To identify and isolate individual objects (coins) in the image, we performed:
+
+- **Gaussian Blurring:** Applied with a larger kernel to smooth the image.
+- **Binary Thresholding:** Used to convert the image to a binary form, making objects more distinguishable.
+- **Contour Detection:** Extracted the contours of each object.
+- **Bounding Boxes:** Drew rectangles around each detected object and saved individual object images.
+
+The number of detected objects (coins) was counted and visualized, individual coin images saved in `output1c` folder.
+The transformed images were saved in the `output1a` folder.
+<p align="center">
+  <img src="output1c/all_steps_at_a_glance.png" alt="Grayscale" width="800"/>
+</p>
+
+### Feature Detection and Image Stitching
+
+Using the SIFT (Scale-Invariant Feature Transform) method, we extracted keypoints and descriptors from two images:
+
+- **Feature Detection:** Identified and visualized distinctive keypoints.
+- **Keypoint Matching:** Applied the BFMatcher with a ratio test to match keypoints between two images.
+- **Homography Estimation:** Calculated a transformation matrix to align images.
+- **Image Stitching:** Combined two images into a seamless panorama.
+
+The stitched images were saved to `output2` folder.
+
+Original images (image1.jpeg, image2.jpeg, image3.jpeg):
+The transformed images were saved in the `output1a` folder.
+<p align="center">
+  <img src="input/image1.jpeg" alt="Grayscale" width="200"/>
+  <img src="input/image2.jpeg" alt="Negative" width="200"/>
+  <img src="/home/jinesh14/CourseWork/VR/input/image3.jpeg" alt="Histogram Equalization" width="200"/>
+</p>
+
+Final stitched image 'output2/stitched2.jpeg':
+The transformed images were saved in the `output1a` folder.
+<p align="center">
+  <img src="output2/stitched2.jpeg" alt="Grayscale" width="200"/>
+</p>
+
+
+
 ## Requirements
 - Python 3.8+
 - OpenCV
