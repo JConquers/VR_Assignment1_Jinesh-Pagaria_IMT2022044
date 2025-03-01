@@ -98,7 +98,7 @@ To identify and isolate individual objects (coins) in the image, we performed:
 - **Bounding Boxes:** Drew rectangles around each detected object and saved individual object images.
 
 The number of detected objects (coins) was counted and visualized, individual coin images saved in `output1c` folder.
-The transformed images were saved in the `output1a` folder.
+
 <p align="center">
   <img src="output1c/all_steps_at_a_glance.png" alt="Grayscale" width="800"/>
 </p>
@@ -115,17 +115,15 @@ Using the SIFT (Scale-Invariant Feature Transform) method, we extracted keypoint
 The stitched images were saved to `output2` folder.
 
 Original images (image1.jpeg, image2.jpeg, image3.jpeg):
-The transformed images were saved in the `output1a` folder.
 <p align="center">
   <img src="input/image1.jpeg" alt="Grayscale" width="200"/>
   <img src="input/image2.jpeg" alt="Negative" width="200"/>
-  <img src="image3.jpeg" alt="Histogram Equalization" width="200"/>
+  <img src="input/image3.jpeg" alt="Histogram Equalization" width="200"/>
 </p>
 
 Final stitched image 'output2/stitched2.jpeg':
-The transformed images were saved in the `output1a` folder.
 <p align="center">
-  <img src="output2/stitched2.jpeg" alt="Grayscale" width="200"/>
+  <img src="output2/stitched2.jpeg" alt="Grayscale" width="800"/>
 </p>
 
 
