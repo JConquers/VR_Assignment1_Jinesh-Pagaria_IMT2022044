@@ -39,12 +39,13 @@ env\Scripts\activate     # For Windows
 pip install -r requirements.txt
 ```
 4. **Run Coin Detection and Segmentation:**
-Notebooks `scripts/1.ipynb` and `scripts/2.ipynb` contain code corresponding to 1sta nd 2nd part. `scripts/help.py` reads an image to generate the histogram distribution of its intensities, use of which is explained in the report.
-5. **View Outputs:**
+ Notebooks `scripts/1.ipynb` and `scripts/2.ipynb` contain code corresponding to 1sta nd 2nd part. `scripts/help.py` reads an image to generate the histogram distribution of its intensities, use of which is explained in the report.
+5. **View Inputs and Outputs:**
 - Coin image transformation `output1a`
 - Coin edge detection in `output1b`
 - Separated coins images in `output1c`
 - Stitched panorama in `output2`
+- Images used are in `input`
 
 
 ## Methods, Observations and Results
