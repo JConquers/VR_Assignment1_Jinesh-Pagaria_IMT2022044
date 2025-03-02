@@ -59,7 +59,7 @@ We applied several transformations on the input image to explore different visua
 - **Contrast Stretching:** Enhances the contrast by stretching pixel intensity across the entire range.
 - **Histogram Equalization:** Adjusts the contrast using the image’s histogram for a more uniform intensity distribution.
 
-The transformed images were saved in the `output1a` folder.
+The transformed images were saved in the `output1a` folder. For `input/img1.png` results are:
 <p align="center">
   <img src="output1a/grayscale.png" alt="Grayscale" width="200"/>
   <img src="output1a/image_negative.png" alt="Negative" width="200"/>
